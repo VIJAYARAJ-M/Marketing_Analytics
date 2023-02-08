@@ -12,6 +12,7 @@ import Linked from "../../Image/Linked.png"
 import Click from "../../Image/Clicks.png"
 import Facebook from "../../Image/Facebook.png"
 import Commands from "../../Image/Commands.png"
+import { format } from "date-fns"
 
 
  const seriesstack= [{
@@ -112,16 +113,17 @@ import Commands from "../../Image/Commands.png"
       },
   }
 export default function Social1(){
-    const [selectedDate, setSelectedDate] = useState(new Date());
-    console.log("date",selectedDate)
-
-
-    // const Value=()=>{
-    //     var today = new Date("MM");
-    //       console.log("date",today)
-        
-    // }
+   
     
+    const [selectedDate, setSelectedDate] = useState(format(new Date("2023-01-06"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
+    const [ToDate, setToDate] = useState(format(new Date("2023-01-02"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
+    
+    
+   
     return(
         <div>
          
@@ -145,7 +147,8 @@ export default function Social1(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  
+                             type='date' value={ToDate} onChange={e => setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -163,7 +166,8 @@ export default function Social1(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"   type='date' value={selectedDate} onChange={e => setSelectedDate(e.target.value)}/>
+                             <input className="css-1s2u09g-control"   type='date' 
+                             value={selectedDate} onChange={e => setSelectedDate(e.target.value)}/>
                             </Col>
                           </Row>
                           

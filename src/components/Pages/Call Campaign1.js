@@ -11,6 +11,7 @@ import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes"
 
 import ReactApexChart from "react-apexcharts"
 import { useState,useEffect } from "react"
+import { format } from "date-fns"
 
 
 const seriesdount= [44,  13,]
@@ -163,6 +164,13 @@ const seriess=[{
   },]
 export default function CallCampaign1(){
 
+  const [FromDate, setFromDate] = useState(format(new Date("2023-01-01"), 'yyyy-MM-dd'));
+ 
+
+  const [ToDate, setToDate] = useState(format(new Date("2023-01-09"), 'yyyy-MM-dd'));
+
+
+
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   useEffect(() => {
@@ -218,7 +226,8 @@ export default function CallCampaign1(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={FromDate} onChange={(e)=>setFromDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -236,7 +245,8 @@ export default function CallCampaign1(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={ToDate} onChange={(e)=>setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           

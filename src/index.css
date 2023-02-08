@@ -114,10 +114,15 @@ h1,h2,h3,h4,h5,h6{
   color:var(--text-primary) !important;
   background-color: var(--tab-bg) !important;
   border-color:var(--border-color) !important;
+  font-size: 15px;
+  font-family: serif;
+
 }
 .nav-tabs .nav-link{
   background-color: #f5f3f3 !important;
   color: #5e5a5a !important;
+  font-size: 15px;
+  font-family: serif;
 }
 .navs{
   height: 0px !important;
@@ -133,4 +138,9 @@ h1,h2,h3,h4,h5,h6{
 }
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+.css-1r4vtzz{
+  background-color:var(--index-bg) !important ;
+  color: white !important;
 }

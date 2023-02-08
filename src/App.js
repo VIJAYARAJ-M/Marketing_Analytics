@@ -30,16 +30,16 @@ function App() {
   return (
     <div className="Main">
       <UserContext.Provider value={{ theme: theme, color: switchTheme }}>
-        {/* <BrowserRouter>
+       {/* <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
           </Routes>
-        </BrowserRouter> */}
+        </BrowserRouter>  */}
         
-       {/* <Top/>  */}
+     
 
-       <MainPage/>
+        <MainPage/> 
       
         </UserContext.Provider>
     </div>

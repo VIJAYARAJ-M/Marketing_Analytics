@@ -2,7 +2,7 @@ import React,{useState ,useEffect} from "react"
 import {Row, Col, Card, Button,} from "reactstrap"
 import ReactApexChart from "react-apexcharts"
 import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes"
-import Select from "react-select"
+
 
 import Recepient from "../../Image/Recepient.png"
 import Delivery from "../../Image/Email Delivery.png"
@@ -17,25 +17,26 @@ import Sub from "../../Image/Unsub.png"
 import Reply from "../../Image/Reply.png"
 
 import {FcDownload} from "react-icons/fc"
+import { format } from "date-fns"
 
 
 const options = [{
-    "id": 1,
-    "value": "9ce42304-b732-4791-9731-6f299b6df8c7",
-    "label": "GS"
-  }, {
-    "id": 2,
-    "value": "90419f06-7d07-45c8-bcec-d675096fe27f",
-    "label": "Blue base"
-  }, {
-    "id": 3,
-    "value": "a23521da-0a48-4ef6-baa2-d727704f65c2",
-    "label": "Shiash"
-  }, {
-    "id": 4,
-    "value": "34b2b58a-0123-49e2-b2de-1eef0922139b",
-    "label": "Xo"
-  },]
+  "id": 1,
+  "value": "9ce42304-b732-4791-9731-6f299b6df8c7",
+  "label": "GS"
+}, {
+  "id": 2,
+  "value": "90419f06-7d07-45c8-bcec-d675096fe27f",
+  "label": "Blue base"
+}, {
+  "id": 3,
+  "value": "a23521da-0a48-4ef6-baa2-d727704f65c2",
+  "label": "Shiash"
+}, {
+  "id": 4,
+  "value": "34b2b58a-0123-49e2-b2de-1eef0922139b",
+  "label": "Xo"
+},]
 
 const seriesbar1= [{
     name: 'Net Profit',
@@ -263,6 +264,7 @@ const seriesbar1= [{
   
   ]
 export default function Emailcamapaign(){
+
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     useEffect(() => {
@@ -294,7 +296,10 @@ export default function Emailcamapaign(){
       }
     }
   
+    const [FromDate, setFromDate] = useState(format(new Date("2023-02-01"), 'yyyy-MM-dd'));
+ 
 
+    const [ToDate, setToDate] = useState(format(new Date("2023-06-06"), 'yyyy-MM-dd'));
 
     return(
         <div>
@@ -320,7 +325,8 @@ export default function Emailcamapaign(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={FromDate} onChange={e => setFromDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -338,7 +344,8 @@ export default function Emailcamapaign(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={ToDate} onChange={e => setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           

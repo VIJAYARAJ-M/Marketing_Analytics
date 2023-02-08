@@ -6,6 +6,9 @@ import Outbound from "../../Image/SmsOut.png"
 import Delivery from "../../Image/SmsDeliverd.png"
 import Failed from "../../Image/SmsFailed.png"
 import ReactApexChart from "react-apexcharts"
+import { format } from "date-fns"
+import { useState } from "react"
+
 
 const seriesdount= [44,  13,6,8,13]
 
@@ -166,6 +169,12 @@ const table = [{
   
   ]
 export default function Sms(){
+  const [selectedDate, setSelectedDate] = useState(format(new Date("2023-01-06"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
+    const [ToDate, setToDate] = useState(format(new Date("2023-01-02"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
     return(
         <div className="m-3 mt-3">
             
@@ -193,7 +202,8 @@ export default function Sms(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={ToDate} onChange={(e)=>setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -211,7 +221,8 @@ export default function Sms(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={selectedDate} onChange={(e)=>setSelectedDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           

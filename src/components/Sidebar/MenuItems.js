@@ -5,10 +5,9 @@ import {FiChevronUp, FiChevronDown} from "react-icons/fi"
 import {MdEmail} from "react-icons/md"
 import {MdOutlineWifiCalling3} from "react-icons/md"
 import {TiSocialLastFmCircular} from "react-icons/ti"
-import {SiAzurepipelines} from "react-icons/si"
 import {FaSms} from "react-icons/fa"
 import {AiOutlineApartment} from "react-icons/ai"
-import Dashboard from "../Pages/Dashboard"
+
 
 export const menuItem =[
         {
@@ -51,11 +50,7 @@ export const menuItem =[
                   path: '/social',
                   icon: <TiSocialLastFmCircular />
                 },
-                {
-                  title: 'Pipeline',
-                  path: '/pipe',
-                  icon: <SiAzurepipelines />
-                },
+                
                 {
                   title: 'SMS Campaign',
                   path: '/sms',

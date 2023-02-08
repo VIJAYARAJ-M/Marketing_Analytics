@@ -1,6 +1,8 @@
 import React from "react"
 import {Row,Col,Card,Button} from "reactstrap"
 import ReactApexChart from "react-apexcharts"
+import { format } from "date-fns"
+import { useState } from "react"
 
 const seriesbar2= [{
     name: 'Net Profit',
@@ -180,6 +182,13 @@ const seriesbar2= [{
   }
 
 export default function Social2(){
+
+  const [selectedDate, setSelectedDate] = useState(format(new Date("2023-01-06"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
+    const [ToDate, setToDate] = useState(format(new Date("2023-01-02"), 'yyyy-MM-dd'));
+    console.log("date",selectedDate);
+
     return(
         <div>
             
@@ -203,7 +212,8 @@ export default function Social2(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={ToDate} onChange={(e)=>setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -221,7 +231,8 @@ export default function Social2(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={selectedDate} onChange={(e)=>setSelectedDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           

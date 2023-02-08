@@ -37,6 +37,7 @@ const Right =styled.div`
 
 
 export default function Sidebar({children}){
+    console.log("a",children)
 
     
   const[isopen, setopen] = useState(false);

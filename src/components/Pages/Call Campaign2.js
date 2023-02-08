@@ -8,6 +8,8 @@ import Resolution from "../../Image/resolution.png"
 import Customer from "../../Image/customer.png"
 
 import ReactApexChart from "react-apexcharts"
+import { format } from "date-fns"
+import { useState } from "react"
 
 
 const seriesdount= [44,  13,]
@@ -253,6 +255,12 @@ const optionsdount1= {
   }]
 }
 export default function CallCampaign2(){
+
+  const [FromDate, setFromDate] = useState(format(new Date("2023-01-01"), 'yyyy-MM-dd'));
+ 
+
+  const [ToDate, setToDate] = useState(format(new Date("2023-01-09"), 'yyyy-MM-dd'));
+
     return(
         <div>
             
@@ -276,7 +284,8 @@ export default function CallCampaign2(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={FromDate} onChange={(e)=>setFromDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -294,7 +303,8 @@ export default function CallCampaign2(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                              value={ToDate} onChange={(e)=>setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           

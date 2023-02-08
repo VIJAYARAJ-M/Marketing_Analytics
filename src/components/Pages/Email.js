@@ -9,20 +9,20 @@ import EmailCamapign4 from "./EmailCampaign4"
 export default function Email1(){
     return(
         <div className="mt-3 p-3" style={{backgroundColor:""}}>
-            <Tabs defaultActiveKey="email2">
-                <Tab eventKey="email" title="Email Camapign Report">
+            <Tabs defaultActiveKey="email">
+                <Tab eventKey="email" title="Email Campaign Report">
                      <Emailcamapaign/>
                 </Tab>
-                <Tab eventKey="email1" title="Email Camapign1">
+                {/* <Tab eventKey="email1" title="Email Analytics Design">
                      <EmailCamapign1/>
                 </Tab>
-                <Tab eventKey="email2" title="Email Camapign2">
+                <Tab eventKey="email2" title="Email Average Rates">
                      <EmailCamapign2/>
                 </Tab>
-                <Tab eventKey="email3" title="Email Camapign3">
+                <Tab eventKey="email3" title="Email Bounce Rate">
                      <EmailCamapign3/>
-                </Tab>
-                <Tab eventKey="email4" title="Email Camapign4">
+                </Tab> */}
+                <Tab eventKey="email4" title="Mass Email Performance Report">
                      <EmailCamapign4/>
                 </Tab>
             </Tabs>

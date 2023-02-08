@@ -7,10 +7,10 @@ export default function Call(){
     return(
         <div className="mt-3 p-3" >
              <Tabs defaultActiveKey="call1">
-                <Tab eventKey="call1" title="Call Camapign1">
+                <Tab eventKey="call1" title="Call Campaign Report">
                     <CallCampaign1/>
                 </Tab>
-                <Tab eventKey="call2" title="Call Camapign2">
+                <Tab eventKey="call2" title="Call Tracking Report">
                    <CallCampaign2/>
                 </Tab>
                

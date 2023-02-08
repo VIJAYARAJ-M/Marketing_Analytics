@@ -18,6 +18,8 @@ import BounceCount from "../../Image/BounceCount.png"
 import Unique from "../../Image/UniqueClick.png"
 
 import Hard from "../../Image/Hardness.png"
+import { format } from "date-fns"
+import { useState } from "react"
 
 
 const series111=[{
@@ -101,6 +103,12 @@ const options111={
   }]
 }
 export default function EmailCampaign4(){
+
+  const [FromDate, setFromDate] = useState(format(new Date("2023-02-01"), 'yyyy-MM-dd'));
+ 
+
+  const [ToDate, setToDate] = useState(format(new Date("2023-06-06"), 'yyyy-MM-dd'));
+
   return(
     <div>
             <Row className="mt-2">
@@ -123,7 +131,8 @@ export default function EmailCampaign4(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={FromDate} onChange={(e)=>setFromDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
@@ -141,7 +150,8 @@ export default function EmailCampaign4(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control"  type='date'
+                             value={ToDate} onChange={(e)=>setToDate(e.target.value)}></input>
                             </Col>
                           </Row>
                           
