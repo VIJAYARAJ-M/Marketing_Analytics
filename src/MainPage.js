@@ -12,7 +12,7 @@ import Marketing from "./components/Pages/Email Marketing";
 import Pipline from "./components/Pages/Pipeline";
 export default function MainPage(){
 
-      const baseurl="http://localhost:3000/"
+      //const baseurl="http://localhost:3000/"
 
     return(
         <div>
@@ -39,7 +39,7 @@ export default function MainPage(){
                <Route path="/sms" element={<Sms/>} />
                <Route path="/analytics" element={<Email/>} />
                <Route path="/marketing" element={<Marketing/>} />
-               <Route path="/pipe" element={<Pipline/>} /> 
+               {/* <Route path="/pipe" element={<Pipline/>} />  */}
               
 
               </Routes>
