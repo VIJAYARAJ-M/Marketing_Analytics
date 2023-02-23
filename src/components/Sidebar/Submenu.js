@@ -60,6 +60,7 @@ const DropdownLinks = styled(Link)`
 `;
   
 export default function SubMenu({ item})  {
+  console.log("item",item)
  
   const [subnav, setSubnav] = useState(false);
   

@@ -13,6 +13,11 @@ import Admin from "./components/Layouts/Admin";
 import Login from "./components/Pages/Login";
 import Register from "./components/Pages/Register";
 import Top from "./components/Layouts/TopNavbar";
+import Email1 from './components/Pages/Email';
+import Call from './components/Pages/Call';
+import Social from "./components/Pages/Social";
+import Sms from './components/Pages/Sms Campaign';
+import Marketing from './components/Pages/Email Marketing';
 
 
 export  const UserContext=createContext();
@@ -30,16 +35,20 @@ function App() {
   return (
     <div className="Main">
       <UserContext.Provider value={{ theme: theme, color: switchTheme }}>
-       {/* <BrowserRouter>
+       <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
+            <Route path="*" element={<MainPage/>}/>
+            
+
+           
           </Routes>
-        </BrowserRouter>  */}
+        </BrowserRouter> 
         
      
 
-        <MainPage/> 
+        {/* <MainPage/>  */}
       
         </UserContext.Provider>
     </div>
