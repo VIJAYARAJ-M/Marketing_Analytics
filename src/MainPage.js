@@ -16,18 +16,8 @@ export default function MainPage() {
 
   return (
     <div>
-
-
-
-
       <Sidebar>
-       
-        
           <Routes>
-
-
-
-
             <Route path="/" element={<Email/>} />
             <Route path="/dash" element={<Dashboard />} />
             <Route path="/email" element={<Email1 />} />
@@ -36,11 +26,7 @@ export default function MainPage() {
             <Route path="/sms" element={<Sms />} />
             <Route path="/analytics" element={<Email />} />
             <Route path="/marketing" element={<Marketing />} />
-            {/* <Route path="/pipe" element={<Pipline/>} />  */}
-
-
           </Routes>
-       
       </Sidebar>
 
     </div>
